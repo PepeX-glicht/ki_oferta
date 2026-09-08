@@ -2,7 +2,7 @@ function home(app){
     app.innerHTML = `
     <div>
         <h1>
-            pagina de inicial
+            pagina inicial
         </h1>
     </div>
       

@@ -1,8 +1,8 @@
-function home(app){
+function lista(app){
     app.innerHTML = `
     <div>
         <h1>
-            pagina de inicial
+            pagina de lista
         </h1>
     </div>
       
@@ -12,6 +12,6 @@ function home(app){
 export default {
     url: "#lista",
     label: "lista",
-    icon: "bagde-dollar-sign",
+    icon: "SquareText",
     pagina: lista
 }
