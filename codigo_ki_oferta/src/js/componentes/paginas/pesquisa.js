@@ -1,3 +1,4 @@
+import produtos from '../paginas/produtos.js'
 function pesquisa(app) {
     app.innerHTML = `
     <div class="container-buscar">
@@ -19,28 +20,41 @@ function pesquisa(app) {
             <p>Categoria</p>
             <ul class="categoria-lista">
                   <li class="categoria-item">
-                     <a href="#mercearia">Mercearia</a>
+                     Mercearia
                   </li>
                   <li class="categoria-item">
-                     <a href="#carne">Carnes</a>
+                     Carnes
                   </li>
                   <li class="categoria-item">
-                     <a href="#hortifruti">Hortifruti</a>
+                     Hortifruti
                   </li>
                   <li class="categoria-item">
-                     <a href="#bebidas">Bebidas</a>
+                     Bebidas
                   </li>
                   <li class="categoria-item">
-                    <a href="#limpeza">Limpeza</a>
+                    Limpeza
                   </li>
                   <li class="categoria-item">
-                    <a href="#higiene">Higiene</a>
+                    Higiene
                   </li>
             </ul>            
       </div>
 </div>
       
     `
+
+   document.querySelector(".categoria-lista ").addEventListener("click", (event)=>{
+        console.log(event.target.textContent.toLowerCase().trim())
+        let categoriaSelecionada = event.target.textContent.toLowerCase().trim()
+        produtos.pagina(app,categoriaSelecionada)
+   } )
+
+   capturarEvento(app)    
+}
+
+function capturarEvento(app){
+   const categorias = document.querySelectorAll(".categoria-item")
+   //console.log(categorias[0].textContent.toLowerCase())
 }
 
 export default {
